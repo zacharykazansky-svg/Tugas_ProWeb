@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Akun</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>AKUN</legend>
+        <form id="formLogin" action="after-masuk.html">
+            <label for="email">Email </label>
+            <input type="email" name="email" id="email" required placeholder="masukkan email">
+
+            <label for="sandi">Password </label>
+            <input type="password" name="sandi" id="sandi" required placeholder="masukkan password">
+
+
+            <input type="submit" id="btnLogin" value="Login">
+        </form>
+    </fieldset>
+    <div id="logoutLoading">
+      <div style="text-align:center;">
+        <div id="spinner"></div>
+        <p style="margin-top:10px; font-weight:bold;">Memuat...</p>
+      </div>
+    </div>
+
+  <script>
+  document.getElementById('formLogin').addEventListener('submit', function(e){
+    e.preventDefault(); // tahan dulu pindahnya
+    let tujuan = this.getAttribute('action');
+    
+    // munculin loading
+    document.getElementById('logoutLoading').style.display = 'flex';
+    
+    // jeda 1.2 detik baru pindah halaman
+    setTimeout(function(){
+      window.location.href = tujuan;
+    }, 1200);
+  });
+  </script>
+</body>
+
+</html>

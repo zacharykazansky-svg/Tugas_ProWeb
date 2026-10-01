@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Akun</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+  <fieldset>
+    <legend>AKUN</legend>
+    <form id="formBuat" action="after-buat.html">
+      <label for="nama">Nama </label>
+      <input type="text" name="nama" id="nama" required placeholder="masukkan nama">
+
+      <label for="email">Email </label>
+      <input type="email" name="email" id="email" required placeholder="masukkan email">
+
+      <label for="sandi">Password </label>
+      <input type="password" name="sandi" id="sandi" required placeholder="masukkan password">
+
+      <label for="alamat">Alamat </label>
+      <textarea name="alamat" id="alamat" required placeholder="masukkan alamat"></textarea>
+
+      <div class="checks">
+        <p>Kelamin </p>
+        <label><input type="radio" name="kelamin" id="laki-laki" value="laki-laki"> Laki-laki</label>
+        <label><input type="radio" name="kelamin" id="perempuan" value="perempuan"> Perempuan</label>
+      </div>
+
+      <div class="checks">
+        <p>Matkul Favorit </p>
+        <label><input type="checkbox" name="matkul" value="Pemrograman Web"> Pemrograman Web</label>
+        <label><input type="checkbox" name="matkul" value="Dasar Pemrograman"> Dasar Pemrograman</label>
+        <label><input type="checkbox" name="matkul" value="Pengantar Teknologi Informasi"> Pengantar Teknologi
+          Informasi</label>
+      </div>
+      <label for="agama">Agama </label>
+      <select name="agama" id="agama" required>
+        <option value="-">-</option>
+        <option value="Islam">Islam</option>
+        <option value="Kristen Protestan">Kristen Protestan</option>
+        <option value="Kristen Katolik">Kristen Katolik</option>
+        <option value="Hindu">Hindu</option>
+        <option value="Buddha">Buddha</option>
+        <option value="Konghucu">Konghucu</option>
+      </select>
+      <input type="submit" value="Create">
+    </form>
+  </fieldset>
+  <div id="logoutLoading">
+    <div style="text-align:center;">
+      <div id="spinner"></div>
+      <p style="margin-top:10px; font-weight:bold;">Memuat...</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('formBuat').addEventListener('submit', function (e) {
+      e.preventDefault(); // tahan dulu pindahnya
+      let tujuan = this.getAttribute('action');
+
+      // munculin loading
+      document.getElementById('logoutLoading').style.display = 'flex';
+
+      // jeda 1.2 detik baru pindah halaman
+      setTimeout(function () {
+        window.location.href = tujuan;
+      }, 1200);
+    });
+  </script>
+  <script>
+    document.getElementById('formBuat').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // 1. Ambil data dari input
+      let nama = document.getElementById('nama').value;
+      let email = document.getElementById('email').value;
+      let password = document.getElementById('sandi').value;
+      let alamat = document.getElementById('alamat').value;
+      let kelamin = document.querySelector('input[name="kelamin"]:checked').value;
+      let matkulList = document.querySelectorAll('input[name="matkul"]:checked');
+      let matkul = [];
+      matkulList.forEach(function (cb) {
+        matkul.push(cb.value);
+      });
+      let agama = document.getElementById('agama').value;
+
+      // 2. SIMPAN data nya
+      localStorage.setItem('namaUser', nama);
+      localStorage.setItem('emailUser', email);
+      localStorage.setItem('passwordUser', password);
+      localStorage.setItem('alamatUser', alamat);
+      localStorage.setItem('genderUser', kelamin);
+      localStorage.setItem('matkulUser', JSON.stringify(matkul));
+      localStorage.setItem('agamaUser', agama);
+
+      // 3. Pindah ke halaman profil yang di foto kamu itu
+      window.location.href = "after-buat.html";
+    });
+  </script>
+</body>
+
+</html>

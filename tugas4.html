@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap</title>
+  <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false" id="belajar"
+                onclick="alert('Silahkan Daftar atau Masuk terlebih dahulu')">
+                Tutorial
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://www.w3schools.com/html/">
+                    HTML</a></li>
+                <li><a class="dropdown-item" href="https://www.w3schools.com/css/">
+                    CSS</a></li>
+                <li><a class="dropdown-item" href="https://www.w3schools.com/js/">
+                    JavaScript</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="https://www.w3schools.com/php/">PHP</a></li>
+                <li><a class="dropdown-item" href="https://www.w3schools.com/sql/">MySQL</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link profil">Profil</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Hubungi
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://wa.me/6283867912350">
+                    WA
+                  </a></li>
+                <li><a class="dropdown-item" href="https://www.instagram.com/zacharykazansky?stkn=MTFzOGN5dW43cmExNQ==">
+                    Instagram</a></li>
+              </ul>
+            </li>
+            <a href="buat.html" id="btnDaftar" class="btn btn-outline-success">Daftar</a>
+            <a href="masuk.html" id="btnMasuk" class="btn btn-primary ms-2">Masuk</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <section>
+    <div class="container">
+      <!-- baris1 -->
+      <div class="row">
+        <!-- baris1 kolom1 -->
+        <div class="col">
+          <h1>Hai!</br>Selamat Datang di ProWeb</h1>
+          <p class="my-4">
+            Belajar pemrograman web mulai dari HTML, CSS , JavaScript, PHP, dan MySql. <br>
+          </p>
+          <a href="#" class="btn btn-success" onclick="alert('Silahkan Daftar atau Masuk terlebih dahulu')">Mulai
+            Belajar</a>
+        </div>
+        <!-- baris1 kolom2 -->
+        <div class="col mt-2 ms-2">
+          <img src="front-end-image.jpeg" alt="Logo pemrograman web" width="700px" height="300px">
+        </div>
+      </div>
+      <!-- baris2 -->
+      <div class="row mt-2">
+        <!-- baris2 kolom1 -->
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Ingin Belajar Fundamental Pemrograman Web?</h5>
+              <p class="card-text">ayo belajar tentang Pemrograman Web dari dasar sampai mahir! </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Silahkan Daftar atau Masuk terlebih dahulu')">Go
+                Youtube</a>
+            </div>
+          </div>
+        </div>
+        <!-- baris2 kolom2 -->
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Featured
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Ingin Belajar Membuat Website Dari 0?</h5>
+              <p class="card-text">ayo belajar coding dari 0 sampai bisa membuat website!</p>
+              <a href="#" class="btn btn-primary" onclick="alert('Silahkan Daftar atau Masuk terlebih dahulu')">Go
+                Youtube</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- overlay loading ketika daftar -->
+  <div id="logoutLoading"
+    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.8); z-index:9999; justify-content:center; align-items:center;">
+    <div class="text-center">
+      <div class="spinner-border text-danger" role="status" style="width:3rem; height:3rem;"></div>
+      <p class="mt-2 fw-bold">Memuat...</p>
+    </div>
+  </div>
+  <!-- loading ketika daftar -->
+  <script>
+    document.getElementById('btnDaftar').addEventListener('click', function (e) {
+      e.preventDefault(); // tahan dulu pindahnya
+      let tujuan = this.getAttribute('href');
+
+      // munculin loading
+      document.getElementById('logoutLoading').style.display = 'flex';
+
+      // jeda 1.0 detik baru pindah halaman
+      setTimeout(function () {
+        window.location.href = tujuan;
+      }, 1000);
+    });
+  </script>
+  <!-- loading ketika masuk -->
+  <script>
+    document.getElementById('btnMasuk').addEventListener('click', function (e) {
+      e.preventDefault(); // tahan dulu pindahnya
+      let tujuan = this.getAttribute('href');
+
+      // munculin loading
+      document.getElementById('logoutLoading').style.display = 'flex';
+
+      // jeda 1.0 detik baru pindah halaman
+      setTimeout(function () {
+        window.location.href = tujuan;
+      }, 1000);
+    });
+  </script>
+  <script src="bootstrap.bundle.js"></script>
+</body>
+
+</html>

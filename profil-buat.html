@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profil.css">
+    
+</head>
+
+<body>
+    <div class="card">
+        <h2>Your Account</h2>
+        <div class="row"><b>Nama</b> <span id="tampilNama"></span></div>
+        <div class="row"><b>Email</b> <span id="tampilEmail"></span></div>
+        <div class="row"><b>Password</b> <span id="tampilPassword"></span></div>
+        <div class="row"><b>Alamat</b> <span id="tampilAlamat"></span></div>
+        <div class="row"><b>Kelamin</b> <span id="tampilGender"></span></div>
+        <div class="row"><b>Matkul Favorit</b> <span id="tampilMatkul"></span></div>
+        <div class="row"><b>Agama</b> <span id="tampilAgama"></span></div>
+        <button id="btnClose">Close</button>
+    </div>
+
+    </div>
+    <script>
+        // AMBIL data yang udah disimpan tadi
+        document.getElementById('tampilNama').innerText = localStorage.getItem('namaUser');
+        document.getElementById('tampilEmail').innerText = localStorage.getItem('emailUser');
+        document.getElementById('tampilPassword').innerText = localStorage.getItem('passwordUser');
+        document.getElementById('tampilAlamat').innerText = localStorage.getItem('alamatUser');
+        document.getElementById('tampilGender').innerText = localStorage.getItem('genderUser');
+        let matkulData = JSON.parse(localStorage.getItem('matkulUser') || '[]');
+        let tampilMatkul = document.getElementById('tampilMatkul');
+
+        if (matkulData.length === 0) {
+            tampilMatkul.innerText = "Tidak ada matkul dipilih";
+        } else {
+            tampilMatkul.innerText = matkulData.join(", ");
+        }
+        document.getElementById('tampilAgama').innerText = localStorage.getItem('agamaUser');
+    </script>
+    <div id="closeLoading">
+      <div style="text-align:center;">
+        <div id="spinner"></div>
+        <p style="margin-top:10px; font-weight:bold;">Close...</p>
+      </div>
+    </div>
+
+    <script>
+        document.getElementById('btnClose').addEventListener('click', function (e) {
+            e.preventDefault(); // tahan dulu pindahnya
+            
+
+            // munculin loading
+            document.getElementById('closeLoading').style.display = 'flex';
+
+            // jeda 1.2 detik baru pindah halaman
+            setTimeout(function () {
+                window.location.href = 'after-buat.html' ;
+            }, 1000);
+        });
+    </script>
+
+</body>
+
+</html>

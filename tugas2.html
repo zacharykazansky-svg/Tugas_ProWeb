@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUGAS INDIVIDU</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>AKUN</legend>
+        <form action="tugas3.html">
+            <label for="nama">Nama </label>
+            <input type="text" name="nama" id="nama" required placeholder="masukkan nama">
+
+            <label for="sandi">Password </label>
+            <input type="password" name="sandi" id="sandi" required placeholder="masukkan password">
+
+            <label for="alamat">Alamat </label>
+            <textarea name="alamat" id="alamat" required placeholder="masukkan alamat"></textarea>
+
+            <div class="checks">
+                <p>Kelamin </p>
+                <label><input type="radio" name="kelamin" value="laki"> Laki-laki</label>
+                <label><input type="radio" name="kelamin" value="perempuan"> Perempuan</label>
+            </div>
+
+            <div class="checks">
+                <p>Matkul Favorit </p>
+                <label><input type="checkbox" name="matkul" value="web"> Pemrograman Web</label>
+                <label><input type="checkbox" name="matkul" value="daspro"> Dasar Pemrograman</label>
+                <label><input type="checkbox" name="matkul" value="pti"> Pengantar Teknologi Informasi</label>
+            </div>
+            <label for="agama">Agama </label>
+            <select name="agama" id="agama" required>
+                <option value="-">-</option>
+                <option value="islam">Islam</option>
+                <option value="protestan">Kristen Protestan</option>
+                <option value="katolik">Kristen Katolik</option>
+                <option value="hindu">Hindu</option>
+                <option value="buddha">Buddha</option>
+                <option value="konghucu">Konghucu</option>
+            </select>
+            <input type="submit" value="Login">
+            
+        </form>
+    </fieldset>
+</body>
+
+</html>

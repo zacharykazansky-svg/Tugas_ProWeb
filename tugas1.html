@@ -1,0 +1,253 @@
+
+
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Kuliah</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            background: white;
+            font-family: "Times New Roman", serif;
+        }
+
+        /* Judul */
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0 35px 0;
+        }
+
+        /* Tabel utama */
+        .tabel {
+            width: 90%;
+            height: 550px;
+            margin: auto;
+            border: 1px solid #bdbdbd;
+            border-collapse: collapse;
+        }
+
+        .tabel td {
+            border: 3px solid black;
+            padding: 0;
+        }
+
+        /* Bagian atas */
+        .atas {
+            height: 150px;
+            background-color: green;
+            font-size: 45px;
+            text-align: center;
+            
+        }
+        
+        
+        .Isi {
+            align-items: end;
+            font-size: 25px;
+            display: block;
+            color: white;
+        }
+        /* Baris kecil di bawah bagian atas */
+        .baris-kecil {
+            height: 70px;
+            text-align: center;
+            background-color: black;
+            
+        }
+        .a-navbar {
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            justify-content: center;
+            margin: 70px;
+            padding: 5px;
+            font-size: 45px;
+            
+        }
+        .li-navbar {
+            list-style-type: none;
+            display: inline-block;
+            
+        }
+        
+
+        /* Bagian tengah */
+        .tengah {
+            height: 350px;
+        }
+
+        /* Kolom kiri */
+        .kolom-kiri {
+            width: 30%;
+            background-color: #C8E6C9;
+            vertical-align: top;
+        }
+        .ul-kolom-kiri {
+            margin: 0;
+        }
+        .li-kolom-kiri {
+            font-size: 30px;
+            padding: 15px;
+        }
+        .a-kolom-kiri {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Kolom kanan */
+        .kolom-kanan {
+            width: 70%;
+            background-color: #F1F3F6;
+            vertical-align: top;
+        }
+        .ul-kolom-kanan {
+            margin: 0;
+        }
+        .li-kolom-kanan-judul {
+            font-size: 30px;
+            padding: 15px;
+            
+        }
+        .li-kolom-kanan-isi {
+            font-size: 30px;
+            padding: 15px;
+            
+        }
+
+        /* Bagian bawah */
+        .bawah {
+            height: 45px;
+            background-color: black; 
+            align-items: center; 
+        }
+        .footer {
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>TUGAS PEMROGRAMAN WEB</h1>
+
+    <table class="tabel">
+
+        <!-- Bagian atas -->
+        <tr class="atas">
+            <td colspan="2">
+                
+            <span class="Judul">BIOGRAFI SINGKAT</span><br>
+            <span class="Isi"><i>Mahasiswa Teknologi Informasi</i></span>
+            </td>
+        </tr>
+
+        <!-- Baris kecil -->
+        <tr class="baris-kecil">
+            <td colspan="2">
+            <ul class="ul-navbar">
+                <li class="li-navbar">
+                    <a href="#" class="a-navbar">HOME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="https://www.bing.com/ck/a?!&&p=61f28c0f61c9c3d67d37d1c349164e3a96fab93b2110c85010cf7e64e769ecf7JmltdHM9MTc4ODMwNzIwMA&ptn=3&ver=2&hsh=4&fclid=20577860-e521-69f5-14fd-6e79e44468d2&psq=akun+satu+usu&u=a1aHR0cHM6Ly9zYXR1LnVzdS5hYy5pZC9sb2dpbi4"
+                     class="a-navbar">WEB USU</a>
+                </li>    
+                <li class="li-navbar">
+                    <a href="https://www.instagram.com/zacharykazansky?igsi=MTFzOGN5dW43cmExNQ==" class="a-navbar">CONTACT ME</a>
+                </li>  
+            </ul>
+            </td>
+        </tr>
+
+        <!-- Bagian utama -->
+        <tr class="tengah">
+            <td class="kolom-kiri">
+                <ul class="ul-kolom-kanan">
+                    <li class="li-kolom-kiri">
+                        <a href="Profil-Gitaris-Dewa-19-Andra-Ramadhan.jpg" class="a-kolom-kiri">Dream Job</a>
+                    </li>
+                    <li class="li-kolom-kiri">
+                        <a href="0e3d0063367c9941973313236af0e5f2.jpg" class="a-kolom-kiri">Favorite guitarist</a>
+                    </li>
+                    <li class="li-kolom-kiri">
+                        <a href="s2-custom-24-usa-hh-trem-rw-hd-191625.jpg" class="a-kolom-kiri">Dream guitar</a>
+                    </li>
+                </ul>
+            </td>
+            <td class="kolom-kanan">
+                <ul class="ul-kolom-kanan">
+                <li class="li-kolom-kanan-judul">Biografi <br>
+                Perkenalkan nama saya Raditya Ahmad Kazansky, mahasiswa teknologi Informasi
+            tahun 2026 dengan nim 261402056. Asal sekolah saya SMAN 1 Tanjung Morawa.
+        Alasan saya memilih TI USU karena Ti itu keren dan mempunyai prospek kerja yang luas
+    jika benar benar dipelajari dan dikuasai.</li>
+                <li class="li-kolom-kanan-isi">Minat dan Bakat <br>
+                Minat saya adalah mengekspresikan diri dengan bermain alat musik
+            ,yaitu gitar.</li>
+               </ul>
+            </td>
+        </tr>
+
+        <!-- Bagian bawah -->
+        <tr class="bawah">
+            <td colspan="2">
+               <p class="footer">Raditya Ahmad Kazansky_261402056_Kom B</p> 
+            </td>
+            
+        </tr>
+
+    </table>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

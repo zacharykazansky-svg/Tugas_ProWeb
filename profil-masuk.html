@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profil.css">
+
+</head>
+
+<body>
+    <div class="card">
+        <h2>Your Account</h2>
+
+        <div class="row"><b>Email</b> <span id="tampilEmail"></span></div>
+        <div class="row"><b>Password</b> <span id="tampilPassword"></span></div>
+        <button id="btnClose">Close</button>
+
+    </div>
+    <script>
+        // AMBIL data yang udah disimpan tadi
+
+        document.getElementById('tampilEmail').innerText = localStorage.getItem('emailUser');
+        document.getElementById('tampilPassword').innerText = localStorage.getItem('passwordUser');
+
+    </script>
+    <div id="closeLoading">
+        <div style="text-align:center;">
+            <div id="spinner"></div>
+            <p style="margin-top:10px; font-weight:bold;">Close...</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('btnClose').addEventListener('click', function (e) {
+            e.preventDefault(); // tahan dulu pindahnya
+
+
+            // munculin loading
+            document.getElementById('closeLoading').style.display = 'flex';
+
+            // jeda 1.2 detik baru pindah halaman
+            setTimeout(function () {
+                window.location.href = 'after-masuk.html';
+            }, 1000);
+        });
+    </script>
+
+
+
+</body>
+
+</html>

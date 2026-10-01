@@ -1,0 +1,107 @@
+body{
+    margin : 0;
+    padding : 0;
+
+}
+#bil2{
+    margin-top: 5px;
+}
+fieldset{
+    width : fit-content;
+}
+
+   
+
+.button{
+    margin-left: 112px;
+    margin-top: 5px;
+}
+
+.hasil{
+    margin-top: 5px;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: Arial, sans-serif;
+}
+
+fieldset {
+    width: 380px;
+    padding: 30px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+/* Tombol operasi */
+.button {
+    display: flex;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.button input[type="submit"] {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #667eea;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button input[type="submit"]:hover {
+    background: #5568d9;
+    transform: translateY(-2px);
+}
+
+.button input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+/* Output */
+#output {
+    background: #f3f4ff;
+    color: #333;
+    font-weight: bold;
+}
+    
